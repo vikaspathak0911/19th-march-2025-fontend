@@ -1,0 +1,239 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li, table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A modern, clean font */
+  line-height: 1.6;
+  color: #333; /* Dark gray for good readability */
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #63a4ff, #607B8B); /* Gradient background */
+  color: white;
+  
+  margin-bottom: 50px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-image-placeholder {
+    background-color: #ccc;
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden; /* Hide any content that overflows */
+}
+
+/* Service Cards */
+.service-cards {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.service-cards h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  width: 300px; /* Fixed width for the cards */
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Move card up slightly on hover */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Pricing Table */
+.pricing-table {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.pricing-table h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden; /* Hide any overflow from rounded corners */
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+th {
+  font-weight: 600;
+  color: #444;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Contact Form */
+.contact-form {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding in width calculation */
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+  height: 150px;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Search Bar */
+.search-bar {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px; /* Limit search bar width */
+  margin: 0 auto 20px; /* Center the search bar */
+  display: block;
+}
+
+.search-results {
+  margin-top: 10px;
+}
+
+.search-results div {
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+}
+
+.search-results div:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design (Media Queries) */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cards-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center;
+  }
+
+  .card {
+    width: 100%; /* Cards take full width on smaller screens */
+    max-width: 400px;
+  }
+
+  table {
+    width: 100%; /* Table takes full width on smaller screens */
+  }
+}
